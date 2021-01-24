@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #22bc9b;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.question {
+  background-color: #673bb7;
+  border-radius: 15px;
+  padding: 1rem;
+  color: white;
+  letter-spacing: 1.5px;
+  min-width: 600px;
+  text-align: center;
+}
+
+.answers {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer {
+  padding: 1.5rem;
+  background: #9e9e9e;
+  margin: 1rem;
+  color: white;
+  border-radius: 15px;
+  min-width: 500px;
+  transition: all 0.1s ease;
+}
+.answer:hover {
+  min-width: 505px;
+  min-height: 50px;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.8rem;
+  width: 90%;
+}
+
+.button-area {
+  text-align: center;
+}
+
+.next-button {
+  background-color: #ff9801;
+  color: white;
+  padding: 1rem;
+  min-width: 150px;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s linear;
+}
+.next-button:hover {
+  min-width: 170px;
+  min-height: 50px;
+}
+.score-area {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.score-text {
+  background-color: #4cb050;
+  padding: 0.8rem;
+  min-width: 100px;
+  text-align: center;
+  margin-left: 0.5rem;
+  border-radius: 8px;
+}
+
+.answer.active {
+  background: #62f05d;
+}
+
+.popup-container {
+  position: fixed;
+  width: 100%;
+  background: rgba(104, 104, 104, 0.8);
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.popup {
+  text-align: center;
+  background: rgb(133, 23, 123);
+  padding: 2rem;
+  border-radius: 8px;
+
+
+
+}
+.popup .note {
+  color: white;
+  
+}
+.popup button {
+  padding: 0.5rem;
+  background-color: #22bc9b;
+  color: white;
+  border-radius: 5px;
+  border: none;
+ 
+}
+
+.popup-container.active {
+  display: flex;
+}
+
+.confeti-container.active {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  
+}
+
+.confeti {
+  position: fixed;
+  top: -1vh;
+  transform: translateY(0);
+  animation: fall 3s linear;
+  font-size: 2.5rem;
+  z-index: 2;
+  
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}
